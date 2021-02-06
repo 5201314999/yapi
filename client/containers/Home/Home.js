@@ -1,15 +1,15 @@
-import './Home.scss';
-import React, { PureComponent as Component } from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { Row, Col, Button, Icon, Card } from 'antd';
-import PropTypes from 'prop-types';
-import { withRouter } from 'react-router';
-import LogoSVG from '../../components/LogoSVG/index.js';
-import { changeMenuItem } from '../../reducer/modules/menu';
-const plugin = require('client/plugin.js');
+import './Home.scss'
+import React, { PureComponent as Component } from 'react'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { Row, Col, Button, Icon, Card } from 'antd'
+import PropTypes from 'prop-types'
+import { withRouter } from 'react-router'
+import LogoSVG from '../../components/LogoSVG/index.js'
+import { changeMenuItem } from '../../reducer/modules/menu'
+const plugin = require('client/plugin.js')
 
-const ThirdLogin = plugin.emitHook('third_login');
+const ThirdLogin = plugin.emitHook('third_login')
 const HomeGuest = () => (
   <div className="g-body">
     <div className="m-bg">
@@ -26,12 +26,7 @@ const HomeGuest = () => (
               <a href="#" className="item">
                 YAPI
               </a>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://hellosean1025.github.io/yapi"
-                className="item"
-              >
+              <a target="_blank" rel="noopener noreferrer" href="https://hellosean1025.github.io/yapi" className="item">
                 使用文档
               </a>
             </div>
@@ -45,7 +40,8 @@ const HomeGuest = () => (
                 <span className="name">YAPI</span>
               </div>
               <div className="detail">
-                高效、易用、功能强大的API管理平台<br />
+                高效、易用、功能强大的API管理平台
+                <br />
                 <span className="desc">旨在为开发、产品、测试人员提供更优雅的接口管理服务</span>
               </div>
               <div className="btn-group">
@@ -54,14 +50,13 @@ const HomeGuest = () => (
                     登录 / 注册
                   </Button>
                 </Link>
+                {console.log('ThirdLogin: ', ThirdLogin)}
                 {ThirdLogin != null ? <ThirdLogin /> : null}
               </div>
             </div>
           </Col>
           <Col lg={15} xs={0} className="col-img">
-            <div className="img-container">
-              
-            </div>
+            <div className="img-container"></div>
           </Col>
         </Row>
       </div>
@@ -69,9 +64,7 @@ const HomeGuest = () => (
     <div className="feat-part section-feature">
       <div className="container home-section">
         <h3 className="title">为API开发者设计的管理平台</h3>
-        <span className="desc">
-          YApi让接口开发更简单高效，让接口的管理更具可读性、可维护性，让团队协作更合理。
-        </span>
+        <span className="desc">YApi让接口开发更简单高效，让接口的管理更具可读性、可维护性，让团队协作更合理。</span>
         <Row key="feat-motion-row">
           <Col span={8} className="section-item" key="feat-wrapper-1">
             <Icon type="appstore-o" className="img" />
@@ -106,9 +99,8 @@ const HomeGuest = () => (
           <Col lg={12} xs={24} className="section-card">
             <Card title="Mock 规则">
               <p className="mock-desc">
-                通过学习一些简单的 Mock
-                模板规则即可轻松编写接口，这将大大提高定义接口的效率，并且无需为编写 Mock 数据烦恼:
-                所有的数据都可以实时随机生成。
+                通过学习一些简单的 Mock 模板规则即可轻松编写接口，这将大大提高定义接口的效率，并且无需为编写 Mock
+                数据烦恼: 所有的数据都可以实时随机生成。
               </p>
               <div className="code">
                 <ol start="1">
@@ -121,9 +113,7 @@ const HomeGuest = () => (
                   <li className="item">
                     <span className="orderNum">2</span>
                     <span>
-                      &ensp;&ensp;&ensp;&ensp;<span className="string">
-                        &quot;errcode|200-500&quot;
-                      </span>
+                      &ensp;&ensp;&ensp;&ensp;<span className="string">&quot;errcode|200-500&quot;</span>
                       <span>
                         :&ensp;<span className="number">200</span>,&ensp;&ensp;
                       </span>
@@ -148,9 +138,8 @@ const HomeGuest = () => (
                   <li className="item">
                     <span className="orderNum">5</span>
                     <span>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span className="string">
-                        &quot;boolean|1&quot;
-                      </span>
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                      <span className="string">&quot;boolean|1&quot;</span>
                       <span>:&ensp;</span>
                       <span className="keyword">true</span>
                       <span>,&ensp;&ensp;</span>
@@ -159,22 +148,19 @@ const HomeGuest = () => (
                   <li className="item">
                     <span className="orderNum">6</span>
                     <span>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span className="string">
-                        &quot;array|2&quot;
-                      </span>
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                      <span className="string">&quot;array|2&quot;</span>
                       <span>
-                        :&ensp;&#91;<span className="string">&quot;Bob&quot;</span>,&ensp;<span className="string">
-                          &quot;Jim&quot;
-                        </span>&#93;,&ensp;&ensp;
+                        :&ensp;&#91;<span className="string">&quot;Bob&quot;</span>,&ensp;
+                        <span className="string">&quot;Jim&quot;</span>&#93;,&ensp;&ensp;
                       </span>
                     </span>
                   </li>
                   <li className="item">
                     <span className="orderNum">7</span>
                     <span>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span className="string">
-                        &quot;combine&quot;
-                      </span>
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                      <span className="string">&quot;combine&quot;</span>
                       <span>:&ensp;</span>
                       <span className="string">&quot;@boolean&ensp;&amp;&ensp;@array&quot;</span>
                       <span>&ensp;&ensp;</span>
@@ -195,8 +181,7 @@ const HomeGuest = () => (
           <Col lg={12} xs={24} className="section-card mock-after">
             <Card title="生成的 Mock 数据">
               <p className="mock-desc">
-                生成的 Mock 数据可以直接用 ajax
-                请求使用，也可以通过服务器代理使用（不需要修改项目一行代码）
+                生成的 Mock 数据可以直接用 ajax 请求使用，也可以通过服务器代理使用（不需要修改项目一行代码）
               </p>
               <div className="code">
                 <ol start="1">
@@ -244,13 +229,10 @@ const HomeGuest = () => (
                     <span className="orderNum">6</span>
                     <span>
                       &ensp;&ensp;&ensp;&ensp;<span className="string">&quot;array&quot;</span>
-                      <span>
-                        :&ensp;
-                      </span>&#91;<span className="string">&quot;Bob&quot;</span>,&ensp;<span className="string">
-                        &quot;Jim&quot;
-                      </span>,&ensp;<span className="string">&quot;Bob&quot;</span>,&ensp;<span className="string">
-                        &quot;Jim&quot;
-                      </span>&#93;<span>,&ensp;&ensp;</span>
+                      <span>:&ensp;</span>&#91;<span className="string">&quot;Bob&quot;</span>,&ensp;
+                      <span className="string">&quot;Jim&quot;</span>,&ensp;
+                      <span className="string">&quot;Bob&quot;</span>,&ensp;
+                      <span className="string">&quot;Jim&quot;</span>&#93;<span>,&ensp;&ensp;</span>
                     </span>
                   </li>
                   <li className="alt">
@@ -258,9 +240,7 @@ const HomeGuest = () => (
                     <span>
                       &ensp;&ensp;&ensp;&ensp;<span className="string">&quot;combine&quot;</span>
                       <span>:&ensp;</span>
-                      <span className="string">
-                        &quot;true & Bob,&ensp;Jim,&ensp;Bob,&ensp;Jim&quot;
-                      </span>
+                      <span className="string">&quot;true & Bob,&ensp;Jim,&ensp;Bob,&ensp;Jim&quot;</span>
                       <span>&ensp;&ensp;</span>
                     </span>
                   </li>
@@ -318,28 +298,28 @@ const HomeGuest = () => (
       </div>
     </div>
   </div>
-);
+)
 HomeGuest.propTypes = {
-  introList: PropTypes.array
-};
+  introList: PropTypes.array,
+}
 
 @connect(
   state => ({
-    login: state.user.isLogin
+    login: state.user.isLogin,
   }),
   {
-    changeMenuItem
+    changeMenuItem,
   }
 )
 @withRouter
 class Home extends Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   componentWillMount() {
     if (this.props.login) {
-      this.props.history.push('/group/261');
+      this.props.history.push('/group/261')
     }
   }
 
@@ -348,11 +328,11 @@ class Home extends Component {
     introList: PropTypes.array,
     login: PropTypes.bool,
     history: PropTypes.object,
-    changeMenuItem: PropTypes.func
-  };
+    changeMenuItem: PropTypes.func,
+  }
   toStart = () => {
-    this.props.changeMenuItem('/group');
-  };
+    this.props.changeMenuItem('/group')
+  }
   render() {
     return (
       <div className="home-main">
@@ -380,7 +360,7 @@ class Home extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
@@ -406,4 +386,4 @@ class Home extends Component {
 //   ]
 // };
 
-export default Home;
+export default Home
